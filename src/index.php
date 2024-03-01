@@ -1,28 +1,36 @@
-
-<!-- 
-HW1: make page title and seat price - constants
-   confine the naming conversation
-HW2: format the total cost
-   Total cost: 2 x 100.50 = 201.00 
--->
-
-
-
 <?
-    const SEAT_PRICE = 100.50;                      // float
-    const PAGE_TITLE = "Booking confirmation";      // string
-    $book_client_vip = true;                        // boolean
-    $book_adults = 2;                               // int
-    $book_cost = $book_adults * SEAT_PRICE          // float
-?> 
+    const TICKET_PRICE = 100;
 
+    $quantity = 0;
+    if(array_key_exists('quantity', $_GET) && ctype_digit($_GET['quantity'])){
+        $quantity = (int) $_GET['quantity'];
+        $cost = TICKET_PRICE * $quantity;
 
+        $total = $cost;
+    } else {
+        $error = "You didn't specify any quantity or quantity isn't of the required type";
+    }
+    
+?>
+    <a href="/?quantity=1">Buy 1 ticket</a><br>
+    <a href="/?quantity=2">Buy 2 ticket</a><br>
+    <a href="/?quantity=3">Buy 3 ticket</a><br>
+<hr>
 
+<form method="GET"  action="/">
+    <input type="text" name="quantity" placeholder="enter desired value...">
+    <button>BUY</button>
+</form>
+<hr>
 
-<h1><?= PAGE_TITLE?></h1>
-<p>Adults: <?= $book_adults?></p>
-<p>Total cost: <?=$book_adults?> x <?= number_format(SEAT_PRICE, 2)?> = <?= number_format($book_cost, 2) ?></p>
+<? if (isset($total)) : ?>
+    <div>
+        <?= $quantity ?> tickets x <?= TICKET_PRICE ?> = <?= $total ?>
+    </div>
+<? endif ?>
 
-<? if ($book_client_vip == true): ?>
-    <p>VIP</p>
+<? if (isset($error)): ?>
+    <div style="color: red;">
+        <?= $error ?>
+    </div>
 <? endif ?>
