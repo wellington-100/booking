@@ -1,5 +1,5 @@
-
 <?php
+    session_start();
     $title = "About us";
     require "blocks/header.php"
 ?>

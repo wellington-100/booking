@@ -15,3 +15,4 @@
         <a href="about.php">About US</a> |
         <a href="contacts.php">Contacts</a>
     </header>
+</body>
