@@ -8,7 +8,7 @@
     $total_pages = 10;
     $prev_page = ($page > 1) ? $page - 1 : $page;
     $next_page = ($page < $total_pages) ? $page + 1 : $page;
-    ?>
+?>
 
 
 <!-- TEMPLATE -->
