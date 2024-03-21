@@ -1,32 +1,33 @@
-<!-- LOGIC -->
-<?
-if (isset ($_GET['p'])) {
-    $page = $_GET['p'];
-} else {
-    $page = 1;
-}
-$images = array(
-    'https://fastly.picsum.photos/id/356/200/300.jpg?hmac=pb0ZyD5jAO137vihtNEtssVuagKD77egevbOXVGquy8',
-    'https://fastly.picsum.photos/id/570/200/300.jpg?hmac=fMlqjNmBSgN75P_tCU-PVSGzRYQxU23Xqd593HxZSZQ',
-    'https://fastly.picsum.photos/id/347/200/300.jpg?hmac=1fVrW9rwreP4KjihlnGB5FbyHgQZ_B06amJlSg6bfes',
-    'https://fastly.picsum.photos/id/344/200/300.jpg?hmac=hFZM-uJoRMyNATe_kjGvS2NGGP60jqqP64vpGQ98VAo',
-    'https://fastly.picsum.photos/id/701/200/300.jpg?hmac=gVWdD9Rh_J0iGXpXOJAN7MZpGPrpeHX_M5JwGGvTSsI',
-    'https://fastly.picsum.photos/id/265/200/300.jpg?hmac=NX0ut-ylHFyYKa4TxhZFNElh-h6RcVV7P4PNPgeBxKk',
-    'https://fastly.picsum.photos/id/716/200/300.jpg?hmac=qbNS_afUKsp_nyvuAAcK8T7OxOtMoqJvLIeaK-jirsU',
-    'https://fastly.picsum.photos/id/602/200/300.jpg?hmac=TkzlF12MtJomcmqzsOc-CR43gSl3xnotDQRPBvM7Avw',
-    'https://fastly.picsum.photos/id/669/200/300.jpg?hmac=ypH3d7OM0ROvll045TKXPpwkg24nCbbWckekDHVyH0U',
-    'https://fastly.picsum.photos/id/446/200/300.jpg?hmac=VaF-vrs-svfPoYxxsTKI08lxXNlPBzqyj97M82eX8mc',
-);
-$total_pages = count($images);
-$prev_page = ($page > 1) ? $page - 1 : $page;
-$next_page = ($page < $total_pages) ? $page + 1 : $page;
-$imageIndex = $page;
-
+<?  //DATA
+    $images = array(
+        'https://fastly.picsum.photos/id/356/200/300.jpg?hmac=pb0ZyD5jAO137vihtNEtssVuagKD77egevbOXVGquy8',
+        'https://fastly.picsum.photos/id/570/200/300.jpg?hmac=fMlqjNmBSgN75P_tCU-PVSGzRYQxU23Xqd593HxZSZQ',
+        'https://fastly.picsum.photos/id/347/200/300.jpg?hmac=1fVrW9rwreP4KjihlnGB5FbyHgQZ_B06amJlSg6bfes',
+        'https://fastly.picsum.photos/id/344/200/300.jpg?hmac=hFZM-uJoRMyNATe_kjGvS2NGGP60jqqP64vpGQ98VAo',
+        'https://fastly.picsum.photos/id/701/200/300.jpg?hmac=gVWdD9Rh_J0iGXpXOJAN7MZpGPrpeHX_M5JwGGvTSsI',
+        'https://fastly.picsum.photos/id/265/200/300.jpg?hmac=NX0ut-ylHFyYKa4TxhZFNElh-h6RcVV7P4PNPgeBxKk',
+        'https://fastly.picsum.photos/id/716/200/300.jpg?hmac=qbNS_afUKsp_nyvuAAcK8T7OxOtMoqJvLIeaK-jirsU',
+        'https://fastly.picsum.photos/id/602/200/300.jpg?hmac=TkzlF12MtJomcmqzsOc-CR43gSl3xnotDQRPBvM7Avw',
+        'https://fastly.picsum.photos/id/669/200/300.jpg?hmac=ypH3d7OM0ROvll045TKXPpwkg24nCbbWckekDHVyH0U',
+        'https://fastly.picsum.photos/id/446/200/300.jpg?hmac=VaF-vrs-svfPoYxxsTKI08lxXNlPBzqyj97M82eX8mc',
+    );
+    
+    
+    // LOGIC
+    if (isset ($_GET['s'])) {
+        $slide = $_GET['s'];
+    } else {
+        $slide = 1;
+    }
+    $total_slides = count($images) - 2;
+    $prev_slide = ($slide > 1) ? $slide - 1 : $slide;
+    $next_slide = ($slide < $total_slides) ? $slide + 1 : $slide;
+    $imageIndex = $slide;
 
 ?>
 
 
-<!-- TEMPLATE -->
+<!-- STYLES -->
 <style>
     body {
         background-color: #222;
@@ -45,6 +46,8 @@ $imageIndex = $page;
         color: #ccc;
     }
 </style>
+
+<!-- SLIDES -->
 <div>
     <img src="<?= $images[($imageIndex == 1) ? 0 : $imageIndex - 1] ?>">
     <img src="<?= $images[$imageIndex] ?>">
@@ -53,13 +56,19 @@ $imageIndex = $page;
 
 </div>
 <hr>
-<div>
-    <a href="?p=<?= $prev_page ?>">
-        <?= ($page > 1) ? '&lt;' : '' ?>
-    </a>
 
-    <a href="?p=<?= $next_page ?>">
-        <?= ($page < $total_pages) ? '&gt;' : '' ?>
+<!-- PAGINATOR -->
+<div>
+    <a href="?s=<?= $prev_slide ?>">
+        <?= ($slide > 1) ? '&lt;' : '' ?>
+    </a>
+    <?php for ($i = 1; $i <= $total_slides; $i++): ?>
+        <a href="?s=<?= $i ?>" class="<?= ($i == $slide) ? 'current' : '' ?>">
+            <?= $i ?>
+        </a>
+    <?php endfor ?>
+    <a href="?s=<?= $next_slide ?>">
+        <?= ($slide < $total_slides) ? '&gt;' : '' ?>
     </a>
 </div>
 
