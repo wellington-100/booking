@@ -1,25 +1,6 @@
 <?php
 include '../tours-data/tours.php';
-
-// Presupunând că ai un array asociativ cu toate tururile
-$tours = [
-    'tour1' => $tour1,
-    'tour2' => $tour2,
-    'tour3' => $tour3,
-    'tour4' => $tour4,
-    'tour5' => $tour5,
-    'tour6' => $tour6,
-    // etc.
-];
-
-$tourID = $_GET['tourID'] ?? 'defaultTourID'; 
-
-if (!isset ($tours[$tourID])) {
-    exit ("Turul nu a fost găsit.");
-}
-
-$tour = $tours[$tourID];
-
+include '../page-middleware.php';
 ?>
 
 <!DOCTYPE html>
@@ -101,7 +82,7 @@ $tour = $tours[$tourID];
                     </tr>
                     <tr class="row-table">
                         <th>Style</th>
-                        <td><?= $tour['destination'] ?></td>
+                        <td><?= $tour['style'] ?></td>
                     </tr>
                     <tr class="row-table">
                         <th>Ages</th>

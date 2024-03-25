@@ -17,7 +17,6 @@ h1, h2 {
     font-size: 1.5em;
 }
 
-/* Content info */
 .content {
     display: flex;
     flex-direction: column;
@@ -31,7 +30,6 @@ h1, h2 {
 }
 .row-table {
     height: 50px;
-    /* Setează înălțimea rândului la 50px */
 }
 .itinerary-info {
     font-size: 0.8em;
@@ -40,11 +38,8 @@ h1, h2 {
 }
 .itinerary-item {
     display: flex;
-    /* Activează Flexbox */
     align-items: center;
-    /* Centrează elementele pe verticală */
     gap: 10px;
-    /* Adaugă un spațiu între elemente */
 }
 .inclusions {
     background-color: gainsboro;
