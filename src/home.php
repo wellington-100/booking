@@ -1,5 +1,5 @@
 <?php
-include 'data/data.php'; // Include fișierul data.php care conține variabila $tour1
+include 'tours-data/tours.php'; // Include fișierul data.php care conține variabila $tour1
 
 // Acum poți folosi $tour1 în home.php
 if (isset ($tour1['name'])) {
@@ -18,7 +18,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour1['name']?></h5>
                     <p class="card-text"><?= $tour1['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour1" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour1" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour2['name']?></h5>
                     <p class="card-text"><?= $tour2['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour2" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour2" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour3['name']?></h5>
                     <p class="card-text"><?= $tour3['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour3" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour3" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour4['name']?></h5>
                     <p class="card-text"><?= $tour4['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour4" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour4" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour5['name']?></h5>
                     <p class="card-text"><?= $tour5['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour5" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour5" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@ if (isset ($tour1['name'])) {
                 <div class="card-body">
                     <h5 class="card-title"><?= $tour6['name']?></h5>
                     <p class="card-text"><?= $tour6['slogan'] ?></p>
-                    <a href="data/explorer.php?tourID=tour6" class="btn btn-primary">Explore</a>
+                    <a href="tours-data/explorer.php?tourID=tour6" class="btn btn-primary">Explore</a>
                 </div>
             </div>
         </div>
