@@ -1,3 +1,6 @@
+
+
+
 <footer>
-    <p>copyright &copy; </p>
+    <p>copyright &copy; 2024</p>
 </footer>

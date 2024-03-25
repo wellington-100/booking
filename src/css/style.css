@@ -1,0 +1,54 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+}
+.carousel-inner img {
+    margin-top: 20px;
+    height: 400px;
+    object-fit: cover;
+}
+h1, h2 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.price-info {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Content info */
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.table {
+    margin-left: 30px;
+
+}
+.row-table {
+    height: 50px;
+    /* Setează înălțimea rândului la 50px */
+}
+.itinerary-info {
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: right;
+}
+.itinerary-item {
+    display: flex;
+    /* Activează Flexbox */
+    align-items: center;
+    /* Centrează elementele pe verticală */
+    gap: 10px;
+    /* Adaugă un spațiu între elemente */
+}
+.inclusions {
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
