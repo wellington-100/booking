@@ -1,5 +1,5 @@
 <?
-    include 'tours-data/tours.php';
+    require 'tours-data/tours.php';
     $page = 'home';
 
     if (isset($_GET['page'])){

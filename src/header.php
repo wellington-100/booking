@@ -11,6 +11,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                <a class="nav-link <?= ($page == 'tours') ? 'active' : '' ?>" href="/?page=tours">TOURS</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?= ($page == 'support') ? 'active' : '' ?>" href="/?page=support">SUPPORT</a>
                 </li>
                 <li class="nav-item">
