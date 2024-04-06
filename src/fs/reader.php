@@ -1,10 +1,11 @@
 <?
-$file = fopen("./format_data/client.json", "r");
-$client = json_decode(fread($file, 1000), true);
-fclose($file);
-$client['age'] = (int)($client['age']);
-$client['active'] = (bool) ($client['active']);
-// print_r($client);
+$path = "./format_data/client.xml";
+$xmlFile = simplexml_load_file($path); // returns SimpleXMLElement data
+$client = [
+    'name' => (string) $xmlFile->name,
+    'email' => (string) $xmlFile->email,
+    'age' => (int) $xmlFile->age,
+    'active' => (bool) $xmlFile->active
+];
 var_dump($client);
-
 ?>

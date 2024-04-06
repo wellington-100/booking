@@ -1,9 +1,5 @@
 <?
-
-
 // get client_name from url (method GET)
-// save the name inside a text file
-
 // ?name=Jhon Doe&email=jd@email.com&age=30&active=true
 
 // HW1: copy only client_data from the $_GET array          ???
@@ -20,9 +16,14 @@
         'active' => $active
     ];
 
+//generate a xml file
+$xml = new SimpleXMLElement('<client/>');
+foreach ($client as $key => $value) {
+    $xml->addChild($key, $value);
+}
 // save to file
-    $file = fopen("./format_data/client.json", "w");
-    fwrite($file, json_encode($client));
+    $file = fopen("./format_data/client.xml", "w");
+    fwrite($file, $xml->asXML());
     fclose($file);
 
 // HW4: try to do the same for XML + YML
