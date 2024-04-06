@@ -1,0 +1,7 @@
+name: Jhon Doe
+email: jd@email.com
+age: 30
+active: true
+visited:
+  - Paris
+  - Rome

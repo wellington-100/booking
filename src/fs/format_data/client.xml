@@ -1,0 +1,10 @@
+<client>
+    <name>Jhon Doe</name>
+    <email value="jd@email.com"/>
+    <age>30</age>
+    <active>true</active>
+    <visited>
+        <location>Paris</location>
+        <location>Rome</location>
+    </visited>
+</client>
