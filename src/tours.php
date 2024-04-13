@@ -2,11 +2,12 @@
 if (isset($_POST['search'])){
     $tours = array_filter($tours, function ($tour){
         return 
-            similar_text($tour['name'], $_POST['search']) >= 3
+            !(stripos($tour['name'], $_POST['search']) === false)
             ||
             $_POST['search'] == '';
     });
 }
+
 if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
     $min_price = $_POST['min_price'] !== '' ? floatval($_POST['min_price']) : 0;
     $max_price = $_POST['max_price'] !== '' ? floatval($_POST['max_price']) : 100000;
@@ -17,6 +18,17 @@ if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
         ||
         ($_POST['min_price'] == '' && $_POST['max_price'] == '');
         
+    });
+}
+
+if (isset($_POST['sort_desc'])) {
+    usort($tours, function($tour_a, $tour_b){
+        return $tour_b['price']['amount'] - $tour_a['price']['amount'];
+    });
+}
+if (isset($_POST['sort_asc'])) {
+    usort($tours, function ($tour_a, $tour_b) {
+        return $tour_a['price']['amount'] - $tour_b['price']['amount'];
     });
 }
 
@@ -42,6 +54,16 @@ if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
 
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
+        SORT BY PRICE
+        <form action="/?page=tours" class="d-flex" method="POST">
+            <button class="btn" name="sort_desc"><i class="bi bi-caret-down-square-fill"></i></button>
+            <button class="btn" name="sort_asc"><i class="bi bi-caret-up-square-fill"></i></button>
+        </form>
+      </div>
+    </nav>
+
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
         <form action="/?page=tours" class="d-flex" role="search" method="POST">
             <input 
                 class="form-control me-2" 
@@ -49,6 +71,7 @@ if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
                 placeholder="min price" 
                 aria-label="min price" 
                 name="min_price"
+                size="6"
                 value="<?= $_POST['min_price'] ?? '' ?>"
             >
             <input 
@@ -57,6 +80,7 @@ if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
                 placeholder="max price" 
                 aria-label="max price" 
                 name="max_price"
+                size="6"
                 value="<?= $_POST['max_price'] ?? '' ?>"
             >
             <button class="btn btn-outline-success" type="submit">Filter</button>
@@ -72,7 +96,7 @@ if (isset($_POST['min_price']) || isset($_POST['max_price'])) {
         $count = 0;
         foreach ($tours as $tour) {
             if ($count % 3 == 0 && $count != 0) {
-                print '</div><div class="row">'; // Atenție la echo aici pentru a începe un nou rând
+                print '</div><div class="row">';
             }
             ?>
             <div class="col-md-4 p-1">
