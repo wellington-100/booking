@@ -47,3 +47,14 @@ h1, h2 {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+.filterArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+    
+.filterArea .navbar {
+     flex-grow: 1;
+}

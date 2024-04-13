@@ -1,5 +1,5 @@
 <?php
-include 'tours-data/tours.php';
+include 'tours-data/tours-data.php';
 ?>
 
 <div class="container">

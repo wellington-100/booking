@@ -20,6 +20,7 @@
                     <a class="nav-link <?= ($page == 'contacts') ? 'active' : '' ?>" href="/?page=contacts">CONTACTS</a>
                 </li>
             </ul>
+            
         </div>
     </div>
 </nav>

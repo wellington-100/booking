@@ -17,7 +17,7 @@ $tour1 = [
     ],
     'duration' => [
         'value' => 10,
-        'unit'=> 'days'
+        'unit' => 'days'
     ],
     'summary' => "From the beautiful Baroque churches of Budapest to the haunted castles of Transylvania, 
                   this ten-day journey across Eastern Europe provides a fascinating insight into an intriguing region. 
