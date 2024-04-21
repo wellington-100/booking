@@ -1,0 +1,9 @@
+{
+    "client": {
+        "full_name": "Tony Stark",
+        "email": "tonny@email.com",
+        "phone_number": "123456"
+    },
+    "ticket_quantity": 10,
+    "tour_id": "6"
+}

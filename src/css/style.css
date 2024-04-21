@@ -58,3 +58,14 @@ h1, h2 {
 .filterArea .navbar {
      flex-grow: 1;
 }
+.divForm {
+  width: 100%; /* Setează lățimea div-ului la 100% din lățimea disponibilă */
+  max-width: 500px; /* Lățimea maximă a div-ului pentru a nu deveni prea larg */
+  padding: 20px; /* Spațiu în jurul formularului */
+  background: white; /* Fundal alb pentru formular */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Umbra pentru estetică */
+}
+
+form {
+  width: 100%; /* Setează lățimea formularului la 100% din div-ul părinte */
+}

@@ -100,7 +100,7 @@ if (isset($_POST['sort_asc'])) {
             }
             ?>
             <div class="col-md-4 p-1">
-                <div class="card" style="width: 18rem; min-height: 400px; margin-bottom: 50px;">
+                <div class="card" style="width: 18rem; min-height: 425px; margin-bottom: 50px;">
                     <img src="<?= $tour['images'][0] ?>" class="card-img-top" alt="<?= htmlspecialchars($tour['name']) ?>">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -113,6 +113,7 @@ if (isset($_POST['sort_asc'])) {
                             <?= htmlspecialchars($tour['price']['amount'].' '.$tour['price']['currency']) ?>
                         </p>
                         <a href="tours-data/explorer.php?tourID=<?= $tourID ?>" class="btn btn-primary">Explore</a>
+                        <a href="/?page=book&id=<?= $tour['id'] ?>" class="btn btn-primary">Book</a>
                     </div>
                 </div>
             </div>

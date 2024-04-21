@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Budapest to Bucharest",
         "start": "Budapest, Hungary",
         "finish": "Bucharest, Romania",
@@ -7,11 +8,11 @@
         "destination": "Romania, Hungary",
         "style": "Original",
         "ages": "Min 15",
-        "group_size": "2-12 persons",
+        "group_size": "2-10 persons",
         "code": "WMSB",
         "slogan": "Explore Eastern Europe's historic Hungary and Romania",
         "price": {
-            "amount": 1600,
+            "amount": 300,
             "currency": "EUR"
         },
         "duration": {
@@ -46,6 +47,7 @@
         }
     },
     {
+        "id": 2,
         "name": "Eastern Europe Explorer",
         "start": "Budapest, Hungary",
         "finish": "Istanbul, Turkey",
@@ -53,11 +55,11 @@
         "destination": "Turkey, Romania, Hungary, Bulgaria",
         "style": "Original",
         "ages": "Min 15",
-        "group_size": "2-12 persons",
+        "group_size": "2-8 persons",
         "code": "WMSEC",
         "slogan": "Tour from bustling Budapest to Istanbul through enchanting Hungary, Romania, Bulgaria.",
         "price": {
-            "amount": 4015,
+            "amount": 515,
             "currency": "EUR"
         },
         "duration": {
@@ -100,6 +102,7 @@
         }
     },
     {
+        "id": 3,
         "name": "Eastern Europe Express",
         "start": "Bucharest, Romania",
         "finish": "Istanbul, Turkey",
@@ -107,11 +110,11 @@
         "destination": "Turkey, Romania, Bulgaria",
         "style": "Original",
         "ages": "Min 15",
-        "group_size": "2-12 persons",
+        "group_size": "2-10 persons",
         "code": "WMSI",
         "slogan": "Explore from Eastern Europe's Romania and Bulgaria to Turkey",
         "price": {
-            "amount": 1668,
+            "amount": 368,
             "currency": "EUR"
         },
         "duration": {
@@ -145,6 +148,7 @@
         }
     },
     {
+        "id": 4,
         "name": "Premium Belgrade to Bucharest",
         "start": "Belgrade, Serbia",
         "finish": "Bucharest, Romania",
@@ -152,11 +156,11 @@
         "destination": "Serbia, Romania",
         "style": "Premium",
         "ages": "Min 15",
-        "group_size": "2-12 persons",
+        "group_size": "2-8 persons",
         "code": "WMPB",
         "slogan": "Grand castles, medieval towns and revolutionary history in Romania.",
         "price": {
-            "amount": 4580,
+            "amount": 880,
             "currency": "EUR"
         },
         "duration": {
@@ -198,6 +202,7 @@
         }
     },
     {
+        "id": 5,
         "name": "Halloween in Transylvania (Southbound)",
         "start": "Cluj Napoca, Romania",
         "finish": "Bucharest, Romania",
@@ -205,11 +210,11 @@
         "destination": "Romania",
         "style": "Original",
         "ages": "Min 15",
-        "group_size": "2-16 persons",
+        "group_size": "2-10 persons",
         "code": "WMSH",
         "slogan": "Spend your spookiest Halloween ever in haunting Romania",
         "price": {
-            "amount": 1800,
+            "amount": 400,
             "currency": "EUR"
         },
         "duration": {
@@ -244,6 +249,7 @@
         }
     },
     {
+        "id": 6,
         "name": "Premium Balkans in Depth",
         "start": "Split, Croatia",
         "finish": "Bucharest, Romania",
@@ -251,11 +257,11 @@
         "destination": "Serbia, Romania, Croatia, Bosnia and Herzegovina",
         "style": "Premium",
         "ages": "Min 15",
-        "group_size": "2-12 persons",
+        "group_size": "2-8 persons",
         "code": "ZMPDC",
         "slogan": "From remote islands to ancient salt mines, explore the Balkans in depth",
         "price": {
-            "amount": 11993,
+            "amount": 993,
             "currency": "EUR"
         },
         "duration": {
